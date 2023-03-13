@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+E:/Documentos/VSCode/Espressif/react-brain/build/CMakeFiles/bootloader
+E:/Documentos/VSCode/Espressif/react-brain/build/CMakeFiles/bootloader.rule
+E:/Documentos/VSCode/Espressif/react-brain/build/CMakeFiles/bootloader-complete.rule
+E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

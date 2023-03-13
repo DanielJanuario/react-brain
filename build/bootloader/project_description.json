@@ -1,0 +1,21 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "E:/Users/danie/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "E:/Documentos/VSCode/Espressif/react-brain/build/bootloader",
+    "config_file":        "E:/Documentos/VSCode/Espressif/react-brain/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.4.3",
+    "target":             "esp32",
+    "rev":                "0",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "E:/Users/danie/esp/esp-idf/components/efuse/Kconfig;E:/Users/danie/esp/esp-idf/components/esp32/Kconfig;E:/Users/danie/esp/esp-idf/components/esp_common/Kconfig;E:/Users/danie/esp/esp-idf/components/esp_hw_support/Kconfig;E:/Users/danie/esp/esp-idf/components/esp_system/Kconfig;E:/Users/danie/esp/esp-idf/components/freertos/Kconfig;E:/Users/danie/esp/esp-idf/components/hal/Kconfig;E:/Users/danie/esp/esp-idf/components/log/Kconfig;E:/Users/danie/esp/esp-idf/components/newlib/Kconfig;E:/Users/danie/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "E:/Users/danie/esp/esp-idf/components/bootloader/Kconfig.projbuild;E:/Users/danie/esp/esp-idf/components/esp_rom/Kconfig.projbuild;E:/Users/danie/esp/esp-idf/components/esptool_py/Kconfig.projbuild;E:/Users/danie/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "E:/Users/danie/esp/esp-idf/components/bootloader", "E:/Users/danie/esp/esp-idf/components/bootloader_support", "E:/Users/danie/esp/esp-idf/components/efuse", "E:/Users/danie/esp/esp-idf/components/esp32", "E:/Users/danie/esp/esp-idf/components/esp_common", "E:/Users/danie/esp/esp-idf/components/esp_hw_support", "E:/Users/danie/esp/esp-idf/components/esp_rom", "E:/Users/danie/esp/esp-idf/components/esp_system", "E:/Users/danie/esp/esp-idf/components/esptool_py", "E:/Users/danie/esp/esp-idf/components/freertos", "E:/Users/danie/esp/esp-idf/components/hal", "E:/Users/danie/esp/esp-idf/components/log", "E:/Users/danie/esp/esp-idf/components/bootloader/subproject/main", "E:/Users/danie/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "E:/Users/danie/esp/esp-idf/components/newlib", "E:/Users/danie/esp/esp-idf/components/partition_table", "E:/Users/danie/esp/esp-idf/components/soc", "E:/Users/danie/esp/esp-idf/components/spi_flash", "E:/Users/danie/esp/esp-idf/components/xtensa", "" ]
+}
