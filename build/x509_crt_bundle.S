@@ -1,4 +1,4 @@
-/* * Data converted from E:/Documentos/VSCode/Espressif/react-brain/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/Daniel/VSCode/ESP_IDF/react-brain/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

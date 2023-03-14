@@ -4,16 +4,16 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "E:/Users/danie/esp/esp-idf/components/bootloader/subproject"
-  "E:/Documentos/VSCode/Espressif/react-brain/build/bootloader"
-  "E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix"
-  "E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/tmp"
-  "E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp"
-  "E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src"
-  "E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/Daniel/esp/esp-idf/components/bootloader/subproject"
+  "C:/Users/Daniel/VSCode/ESP_IDF/react-brain/build/bootloader"
+  "C:/Users/Daniel/VSCode/ESP_IDF/react-brain/build/bootloader-prefix"
+  "C:/Users/Daniel/VSCode/ESP_IDF/react-brain/build/bootloader-prefix/tmp"
+  "C:/Users/Daniel/VSCode/ESP_IDF/react-brain/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/Daniel/VSCode/ESP_IDF/react-brain/build/bootloader-prefix/src"
+  "C:/Users/Daniel/VSCode/ESP_IDF/react-brain/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "E:/Documentos/VSCode/Espressif/react-brain/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/Daniel/VSCode/ESP_IDF/react-brain/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
