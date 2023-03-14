@@ -3,25 +3,6 @@
 esp_adc_cal_characteristics_t adc1_chars;
 
 
-int ledc_pin[] = {
-                    RIGHT_VISUAL_CORTEX_1_PIN,
-                    RIGHT_VISUAL_CORTEX_2_PIN,
-                    LEFT_VISUAL_CORTEX_1_PIN,
-                    LEFT_VISUAL_CORTEX_2_PIN,
-                    RIGHT_AUDITORY_CORTEX_1_PIN,
-                    RIGHT_AUDITORY_CORTEX_2_PIN,
-                    LEFT_AUDITORY_CORTEX_1_PIN,
-                    LEFT_AUDITORY_CORTEX_2_PIN,
-                    RIGHT_STANDART_1_PIN,
-                    RIGHT_STANDART_2_PIN,
-                    RIGHT_STANDART_3_PIN,
-                    RIGHT_STANDART_4_PIN,
-                    LEFT_STANDART_1_PIN,
-                    LEFT_STANDART_2_PIN,
-                    LEFT_STANDART_3_PIN,
-                    LEFT_STANDART_4_PIN,
-                };
-
 uint8_t adc_pin[] = {
                         ADC1_CHANNEL_4,
                         ADC1_CHANNEL_5,
@@ -60,47 +41,56 @@ void vTask_React_Brain(void * param){
         if(l1 > LIGHT_SENSE || l2 > LIGHT_SENSE || s1 > SOUND_SENSE || s2 > SOUND_SENSE){
             if(l1 > LIGHT_SENSE){
                 ESP_LOGI(REACT_BRAIN_TASK_TAG, "L1");
-                ledc_new_config(0, DUTY_HIGH, 150/portTICK_PERIOD_MS);
-                for(uint8_t i = 4; i < sizeof(ledc_pin); i++)
-                    ledc_new_config(i, DUTY_LOW, 150/portTICK_PERIOD_MS);
+                ledc_new_config(0, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                ledc_new_config(1, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                for(uint8_t i = 8; i < 16; i++)
+                    ledc_new_config(i, DUTY_LOW, 500/portTICK_PERIOD_MS);
             }
             else{
-                ledc_new_config(0, DUTY_LOW, 150/portTICK_PERIOD_MS);
+                ledc_new_config(0, DUTY_LOW, 500/portTICK_PERIOD_MS);
+                ledc_new_config(1, DUTY_LOW, 500/portTICK_PERIOD_MS);
             }
 
             if(l2 > LIGHT_SENSE){
                 ESP_LOGI(REACT_BRAIN_TASK_TAG, "L2");
-                ledc_new_config(1, DUTY_HIGH, 150/portTICK_PERIOD_MS);
-                for(uint8_t i = 4; i < sizeof(ledc_pin); i++)
-                    ledc_new_config(i, DUTY_LOW, 150/portTICK_PERIOD_MS);
+                ledc_new_config(2, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                ledc_new_config(3, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                for(uint8_t i = 8; i < 16; i++)
+                    ledc_new_config(i, DUTY_LOW, 500/portTICK_PERIOD_MS);
             }
             else{
-                ledc_new_config(1, DUTY_LOW, 150/portTICK_PERIOD_MS);
+                ledc_new_config(2, DUTY_LOW, 500/portTICK_PERIOD_MS);
+                ledc_new_config(3, DUTY_LOW, 500/portTICK_PERIOD_MS);
             }
 
             if(s1 > SOUND_SENSE){
                 ESP_LOGI(REACT_BRAIN_TASK_TAG, "S1");
-                ledc_new_config(2, DUTY_HIGH, 150/portTICK_PERIOD_MS);
-                for(uint8_t i = 4; i < sizeof(ledc_pin); i++)
-                    ledc_new_config(i, DUTY_LOW, 150/portTICK_PERIOD_MS);
+                ledc_new_config(4, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                ledc_new_config(5, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                for(uint8_t i = 8; i < 16; i++)
+                    ledc_new_config(i, DUTY_LOW, 500/portTICK_PERIOD_MS);
             }
             else{
-                ledc_new_config(2, DUTY_LOW, 150/portTICK_PERIOD_MS);
+                ledc_new_config(4, DUTY_LOW, 500/portTICK_PERIOD_MS);
+                ledc_new_config(5, DUTY_LOW, 500/portTICK_PERIOD_MS);
             }
 
             if(s2 > SOUND_SENSE){
                 ESP_LOGI(REACT_BRAIN_TASK_TAG, "S2");
-                ledc_new_config(3, DUTY_HIGH, 150/portTICK_PERIOD_MS);
-                for(uint8_t i = 4; i < sizeof(ledc_pin); i++)
-                    ledc_new_config(i, DUTY_LOW, 150/portTICK_PERIOD_MS);
+                ledc_new_config(6, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                ledc_new_config(7, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                for(uint8_t i = 8; i < 16; i++)
+                    ledc_new_config(i, DUTY_LOW, 500/portTICK_PERIOD_MS);
             }
             else{
-                ledc_new_config(3, DUTY_LOW, 150/portTICK_PERIOD_MS);
+                ledc_new_config(6, DUTY_LOW, 500/portTICK_PERIOD_MS);
+                ledc_new_config(7, DUTY_LOW, 500/portTICK_PERIOD_MS);
             }
         }
         else{
-            for(uint8_t i = 0; i < sizeof(ledc_pin); i++)
-                ledc_new_config(i, DUTY_HIGH, 150);
+            for(uint8_t i = 0; i < 16; i++)
+                ledc_new_config(i, DUTY_HIGH, 500/portTICK_PERIOD_MS);
+                
         }
 
         // REAGE DE ACORDO
@@ -112,7 +102,7 @@ void vTask_React_Brain(void * param){
 }
 
 void react_brain_init(){
-    ledc_init(ledc_pin);
+    ledc_init();
 
     for(uint8_t i = 0; i < sizeof(adc_pin); i++)
         adc1_config_channel_atten(adc_pin[i], ADC_ATTEN_DB_11);
